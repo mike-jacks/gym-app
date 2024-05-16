@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { fetchExercises } from "../utils/api";
 import ExerciseCard from "../components/ExerciseCard";
@@ -36,7 +36,7 @@ const Exercises: React.FC = () => {
     setSpecificMuscleFilters((prev) => (prev.includes(muscle) ? prev.filter((m) => m !== muscle) : [...prev, muscle]));
   };
 
-  const filterExercises = () => {
+  const filterExercises = useCallback(() => {
     let filtered = exercises;
 
     if (nameFilter) {
@@ -59,7 +59,7 @@ const Exercises: React.FC = () => {
     }
 
     setFilteredExercises(filtered);
-  };
+  }, [exercises, nameFilter, workoutCategoryFilter, movementCategoryFilter, equipmentFilter, majorMuscleFilter, specificMuscleFilters]);
 
   useEffect(() => {
     const getExercises = async () => {
@@ -78,7 +78,7 @@ const Exercises: React.FC = () => {
 
   useEffect(() => {
     filterExercises();
-  }, [nameFilter, workoutCategoryFilter, movementCategoryFilter, equipmentFilter, majorMuscleFilter, specificMuscleFilters]);
+  }, [filterExercises]);
 
   const uniqueWorkoutCategories = [...new Set(exercises.map((exercise) => exercise.workout_category))];
   const uniqueMovementCategories = [...new Set(exercises.map((exercise) => exercise.movement_category))];
