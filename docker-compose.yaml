@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432" # Maps TCP port 5432 in the container to port 5433 on the host
+      - "5433:5432" # Maps TCP port 5432 in the container to port 5433 on the host
     volumes:
       - gymapp_pgdata:/var/lib/postgresql/data # Persists data across container rebuilds
 

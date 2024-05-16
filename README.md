@@ -87,10 +87,16 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
 
    ```sh
    # filename: .env
-   POSTGRES_URL=postgresql://postgres:postgres@localhost:5432/gymapp
+   POSTGRES_URL=postgresql://postgres:postgres@localhost:5433/gymapp
    SECRET_KEY=<CUSTOM_SECRET_KEY>
    ALGORITHM="HS256"
    ACCESS_TOKEN_EXPIRE_MINUTES=15
+   ```
+
+6. **Startup Database:**
+
+   ```sh
+   docker-compose up -d db
    ```
 
 ### Front End Setup
@@ -114,7 +120,7 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    NEXT_PUBLIC_API_URL=http://localhost:8000
    ```
 
-### Running Local
+### Running Backend and Frontend Locally
 
 1. Within the \`backend\` folder, start the backend server with the following command:
 
@@ -128,7 +134,7 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    npm run dev
    ```
 
-### Docker Setup
+### Alternative Docker Setup
 
 1. Navigate to the root directory:
 

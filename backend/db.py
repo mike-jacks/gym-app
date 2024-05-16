@@ -13,6 +13,7 @@ def setup_database(engine: Engine):
     if not inspect(engine).get_table_names():
         SQLModel.metadata.create_all(engine)
         populate_initial_category_items(engine)
+        populate_exercise_data(engine)
 
 def populate_initial_category_items(engine: Engine):
     with open("exercise_json/new_exercise_json.json", 'r') as file:
@@ -80,7 +81,6 @@ postgres_url = config("POSTGRES_URL")
 engine = create_engine(postgres_url, echo=False)
 
 setup_database(engine)
-populate_exercise_data(engine)
 
 
 
