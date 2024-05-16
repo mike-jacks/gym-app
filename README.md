@@ -156,4 +156,6 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
 
 ### Continuous Deployment
 
-Set up continuous deployment by connecting your GitHub repository to Render.com. This ensures that any changes pushed to the repository are automatically deployed.
+By setting up Render.com to connect to your github repository, Set up continuous deployment by connecting your GitHub repository to Render.com. This ensures that any changes pushed to the repository are automatically deployed.
+
+![alt text](<docs/images/Screenshot 2024-05-15 at 6.55.09 PM.png>)
