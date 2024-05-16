@@ -21,6 +21,7 @@ services:
       - "8000:8000" # Maps TCP port 8000 in the container to port 8000 on the host
     env_file:
       - ./backend/.env.docker
+    command: sh -c "uvicorn main:app --reload --host 0.0.0.0 --port 8000 --reload"
     depends_on:
       - db
 
