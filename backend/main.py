@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request, HTTPException 
 from fastapi.middleware.cors import CORSMiddleware
 from pyngrok import ngrok
+import os
 
 from db import engine, SQLModel
 from routes import authorization, exercises, users, workouts, workout_exercises, exercise_logs
@@ -33,10 +34,10 @@ app.include_router(workout_exercises.router, tags=["Workout Exercises"])
 #         raise HTTPException(status_code=400, detail="Use HTTPS instead of HTTP.")
 #     return await call_next(request)
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 #     # # Setup ngrok
 #     # ngrok_tunnel = ngrok.connect(8000)
 #     # print("Public URL:", ngrok_tunnel.public_url)
 #     # Run Uvicorn
-#     import uvicorn
-#     uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=os.getenv("PORT", 8000))
