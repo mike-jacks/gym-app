@@ -93,12 +93,6 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    ACCESS_TOKEN_EXPIRE_MINUTES=15
    ```
 
-6. Start the backend server:
-
-   ```sh
-   uvicorn main:app --reload
-   ```
-
 ### Front End Setup
 
 1. Navigate to the frontend directory:
@@ -120,7 +114,15 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    NEXT_PUBLIC_API_URL=http://localhost:8000
    ```
 
-4. Start the frontend server:
+### Running Local
+
+1. Within the \`backend\` folder, start the backend server with the following command:
+
+   ```sh
+   uvicorn main:app --reload
+   ```
+
+2. Within the \`gym-app-frontend\` folder, start the frontend server with the following command:
 
    ```sh
    npm run dev
