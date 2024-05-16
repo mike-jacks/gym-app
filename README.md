@@ -57,15 +57,19 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
 
 1. **Clone the repository**:  
    Run the following commands in terminal.
+
    ```sh
    git clone https://github.com/mike-jacks/gym-app.git
    cd gym-app/backend
    ```
+
 2. **Create and activate a virtual environment**:
+
    ```sh
    python -m venv .venv
    source .venv/bin/activate
    ```
+
 3. Install dependencies:
 
    ```sh
@@ -90,6 +94,7 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    ```
 
 6. Start the backend server:
+
    ```sh
    uvicorn main:app --reload
    ```
@@ -103,15 +108,20 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    ```
 
 2. Install next.js dependencies:
+
    ```sh
    npm install
    ```
+
 3. Set up environment variables:  
    Create a .env file in the frontend directory with the following content:
+
    ```sh
    NEXT_PUBLIC_API_URL=http://localhost:8000
    ```
+
 4. Start the frontend server:
+
    ```sh
    npm run dev
    ```
@@ -125,12 +135,15 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
    ```
 
 2. Build and run the Docker containers:
+
    ```sh
    docker-compose up -d --build
    ```
+
    You should now have 3 docker containers running:
-   - A frontend containter
-   - A backend container
+
+   - A frontend containter.
+   - A backend container.
    - A postgres db container.
 
 ## Deployment
