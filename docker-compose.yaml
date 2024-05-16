@@ -14,7 +14,9 @@ services:
 
   backend:
     image: mikejacks/gym-app-backend:latest
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     volumes:
       - ./backend:/app
     ports:
@@ -27,7 +29,9 @@ services:
 
   frontend:
     image: mikejacks/gym-app-frontend:latest
-    build: ./gym-app-frontend
+    build:
+      context: ./gym-app-frontend
+      dockerfile: Dockerfile.local
     working_dir: /app
     volumes:
       - ./gym-app-frontend:/app
