@@ -40,4 +40,4 @@ if __name__ == "__main__":
 #     # print("Public URL:", ngrok_tunnel.public_url)
 #     # Run Uvicorn
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)), log_level="info")
+    uvicorn.run("main:app", host="0.0.0.0", port=os.getenv("PORT", 8000), log_level="info")
