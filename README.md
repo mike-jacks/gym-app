@@ -16,7 +16,7 @@ The Gym Tracking App is a comprehensive solution for tracking users' workouts, i
 ## Features
 
 - User Authentication and Authorization
-- API Json conversion scripting
+- API JSON conversion scripting
 - Exercise Database Management
 - Workout Logging (reps, sets, weight, type of exercise)
 - Responsive User Interface
@@ -27,7 +27,7 @@ The Gym Tracking App is a comprehensive solution for tracking users' workouts, i
 
 Main Models/Tables:
 
-- **User:**: Tracks user data including username and password.
+- **User:** Tracks user data including username and password.
 - **Exercise:** Includes preset and custom exercises to be tracked by the user.
 - **ExerciseLog:** Tracks date of specific exercise completed with number of reps and weight used.
 - **WorkoutExercise:** Planned exercise that connects a specific exercise to a planned workout for that exercise setting the goal reps, sets, and weight.
@@ -126,7 +126,7 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
 
 2. Build and run the Docker containers:
    ```sh
-   docker-compose up --build
+   docker-compose up -d --build
    ```
    You should now have 3 docker containers running:
    - A frontend containter
@@ -156,4 +156,4 @@ Follow these steps to set up the development environment for the Gym Tracking Ap
 
 ### Continuous Deployment
 
-By setting up Render.com to connect to your github repository, Set up continuous deployment by connecting your GitHub repository to Render.com. This ensures that any changes pushed to the repository are automatically deployed.
+Set up continuous deployment by connecting your GitHub repository to Render.com. This ensures that any changes pushed to the repository are automatically deployed.
