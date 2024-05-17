@@ -10,7 +10,7 @@ export default function Header() {
     setToken(null);
   };
   return (
-    <header className="bg-blue-500 text-white p-4 fixed top-0 w-full z-50">
+    <header className="bg-slate-700 text-slate-300 p-4 fixed top-0 w-full z-50 rounded-md mx-2 mt-1">
       <h1 className="text-xl">Gym App</h1>
       <nav className="w-full">
         <Link href="/">Home</Link> |{" "}
