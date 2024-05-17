@@ -1,4 +1,3 @@
-from tests.fixtures import session, client, client_full_db, client_login
 from uuid import UUID
 import pytest
 from fastapi.testclient import TestClient

@@ -1,4 +1,3 @@
-from tests.fixtures import session, client, client_full_db, client_login
 import pytest
 from fastapi.testclient import TestClient
 from httpx import Response
