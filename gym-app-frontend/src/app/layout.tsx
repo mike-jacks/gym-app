@@ -7,7 +7,7 @@ import { AuthProvider } from "../app/components/AuthContext";
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <AuthProvider>
     <html lang="en" className="dark">
-      <body className="text-slate-200 bg-gradient-to-b from-green-900 to-blue-950">
+      <body className="text-slate-200 bg-gradient-to-b from-gray-900 to-slate-950">
         <Header />
         <div id="page-container">
           <main className="flex-grow container mx-auto p-4 mt-20">{children}</main>
